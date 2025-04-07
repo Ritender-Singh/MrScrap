@@ -1,0 +1,149 @@
+.tagline {
+      background: linear-gradient(to right, #16a34a, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 700;
+    }
+    .quote-box {
+      background: url('quote-bg.jpg') center/cover no-repeat;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin-top: 2rem;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .quote-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 0;
+    }
+    .quote {
+      position: relative;
+      font-style: italic;
+      z-index: 10;
+      font-size: 1.25rem;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .card {
+        width: 190px;
+        height: 264px;
+        background: rgb(183, 226, 25);
+        font-family: inherit;
+        position: relative;
+        border-radius: 8px;
+      }
+      
+      .quote {
+        color: rgb(223, 248, 134);
+        padding-left: 30px;
+        position: relative;
+      }
+/* quotecard */
+
+.card {
+    width: 320px;
+    height: 480px; /* Increased height */
+    background: rgb(183, 226, 25);
+    font-family: inherit;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .body-text {
+    font-size: 22px;
+    font-weight: 900;
+    padding: 40px 30px 30px;
+    color: #465512;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card-name {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(127, 155, 29);
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .quote {
+    color: rgb(223, 248, 134);
+    text-align: center;
+    margin-top: -10px;
+  }
+
+  .author {
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(127, 155, 29);
+    font-size: 18px;
+  }
+  
+  .card:hover .author {
+    opacity: 1;
+  }
+  
+  .card .author svg {
+    display: inline;
+    width: 18px;
+    height: 18px;
+    color: rgba(128, 155, 29, 0.6);
+  }
+/* BUtton for scehdule */
+
+/* SCEDULE */
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out forwards;
+  }
+  
+
+/* PRCE SECTION */
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out both;
+  }
+  
