@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MrScrap - Scrap Pickup Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+
+  <link rel ="stylesheet" href="styles.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
+  
+  
+  
+</head>
+
+<body class="bg-gray-100 text-gray-900" x-data="{ mobileMenu: false }" @scroll.window="handleScroll()">
+    
+  <!-- Header -->
+ <!-- Header -->
+<header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="logo.png" alt="MrScrap Logo" class="h-8 w-auto mr-2" />
+        <h1 class="text-xl font-bold text-green-700">MrScrap</h1>
+      </div>
+  
+      <!-- Hamburger Button -->
+      <button id="menu-toggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+  
+      <!-- Desktop Nav (hidden on small screens) -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="#home" class="text-gray-700 hover:text-green-600 font-medium">Home</a>
+        <a href="#schedule" class="text-gray-700 hover:text-green-600 font-medium">Schedule</a>
+        <a href="#prices" class="text-gray-700 hover:text-green-600 font-medium">Prices</a>
+        <a href="#about" class="text-gray-700 hover:text-green-600 font-medium">About</a>
+        <a href="#contact" class="text-gray-700 hover:text-green-600 font-medium">Contact</a>
+      </nav>
+    </div>
+  
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 bg-white">
+      <a href="#home" class="block py-2 text-gray-700 hover:text-green-600">Home</a>
+      <a href="#schedule" class="block py-2 text-gray-700 hover:text-green-600">Schedule</a>
+      <a href="#prices" class="block py-2 text-gray-700 hover:text-green-600">Prices</a>
+      <a href="#about" class="block py-2 text-gray-700 hover:text-green-600">About</a>
+      <a href="#contact" class="block py-2 text-gray-700 hover:text-green-600">Contact</a>
+    </div>
+  </header>
+  
+
+  <!-- Hero Section -->
+  <section id="home" class="text-center py-16 bg-white fade-in">
+    <img src="hero-image.png" alt="Scrap Collection" class="mx-auto w-full max-w-md rounded-lg shadow-lg mb-8"> <!-- RESIZE IMAGE-->
+    <h2 class="text-4xl font-bold mb-4 tagline">Recycle Today for a Better Tomorrow</h2>
+    <!-- Promo Banner -->
+<section class="relative flex items-center justify-center py-10 px-6 bg-cover bg-center rounded-2xl shadow-xl overflow-hidden"
+style="background-image: url('banner-image.jpg');">
+<div class="bg-black bg-opacity-50 backdrop-blur-sm p-6 md:p-10 rounded-xl text-center max-w-4xl mx-auto">
+    <p style="font-family: 'Baloo 2', cursive;" class="text-white text-xl md:text-2xl lg:text-3xl tracking-wide leading-snug">
+        “अब कबाड़ बेचें ONLINE MrScrap के साथ” - SAVE WORLD WITH YOUR CONTRIBUTION
+      </p>
+      
+</div>
+</section>
+
+  </section>
+ <!-- QUOTE CARD-->
+  <section class="w-full h-screen flex items-center justify-center bg-gray-50">
+    <div class="card">
+      <div class="card-name">Quote of the month</div>
+      <div class="quote">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 330 307" height="80" width="80">
+          <path fill="currentColor" d="M302.258 176.221C320.678 ..."></path>
+        </svg>
+      </div>
+      <div class="body-text">“There is no such thing as ‘away’. 
+        When we throw anything away, it must go somewhere.”</div>
+      <div class="author">- by Riten<br> <span>(MrScrap)</span>   
+        <svg height="" width="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 0H24V24H0z" fill="none"></path>
+          <path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+  <!--HEADING FOR SCHEDULE-->
+ 
+
+
+
+
+
+  <!-- Schedule Pickup -->
+<!-- Schedule Pickup -->
+<section id="schedule" class="min-h-screen flex items-center justify-center py-16 px-4 bg-gradient-to-br from-green-100 to-green-200">
+  <div class="bg-white bg-opacity-90 backdrop-blur-md rounded-2xl p-8 w-full max-w-xl form-card animate-fade-in shadow-lg">
+
+    <h2 class="text-4xl font-extrabold font-serif text-green-900 mb-6 text-center">Schedule a Pickup</h2>
+
+    <!-- FORM START -->
+    <form class="space-y-6" id="pickupForm">
+      <!-- Name -->
+      <input id="name" type="text" placeholder="Your Name"
+        class="w-full px-4 py-3 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-200" />
+
+      <!-- Phone -->
+      <input id="phone" type="tel" placeholder="Phone Number"
+        class="w-full px-4 py-3 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-200" />
+
+      <!-- Address -->
+      <input id="address" type="text" placeholder="Address"
+        class="w-full px-4 py-3 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-200" />
+
+      <!-- Date -->
+      <input id="date" type="date"
+        class="w-full px-4 py-3 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-200" />
+
+      <!-- PICKUP TIME -->
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <div class="text-center mb-4">
+          <h3 class="text-2xl font-bold text-green-700">PICKUP TIME</h3>
+          <p class="text-sm text-gray-500">Select your preferred time slot</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="time" value="9am - 10am" class="form-radio text-green-600" />
+            <span>9am - 10am</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="time" value="10am - 11am" class="form-radio text-green-600" />
+            <span>10am - 11am</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="time" value="11am - 12pm" class="form-radio text-green-600" />
+            <span>11am - 12pm</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="time" value="2pm - 3pm" class="form-radio text-green-600" />
+            <span>2pm - 3pm</span>
+          </label>
+          <label class="flex items-center space-x-2">
+            <input type="radio" name="time" value="3pm - 4pm" class="form-radio text-green-600" />
+            <span>3pm - 4pm</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Scrap Type -->
+      <select id="scrapType"
+        class="w-full px-4 py-3 border border-green-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 transition duration-200">
+        <option disabled selected value="">Select Scrap Type</option>
+        <option>Plastic</option>
+        <option>Paper</option>
+        <option>Iron</option>
+        <option>Steel</option>
+        <option>Aluminum</option>
+        <option>MIX</option>
+      </select>
+
+      <!-- Submit Button -->
+      <button type="submit"
+        class="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-md transition-all duration-300 transform hover:scale-105 shadow-lg">
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- JS Script -->
+<script>
+  document.getElementById("pickupForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const date = document.getElementById("date").value;
+    const scrapType = document.getElementById("scrapType").value;
+    const time = document.querySelector('input[name="time"]:checked')?.value;
+
+    if (!name || !phone || !address || !date || !time || !scrapType) {
+      alert("⚠️ Please fill in all the fields.");
+      return;
+    }
+
+    if (!/^\d{10}$/.test(phone)) {
+      alert("📞 Enter a valid 10-digit phone number.");
+      return;
+    }
+
+    alert(`✅ Pickup scheduled successfully for ${name}!\n📅 ${date} at ${time}\n📍 ${address}\n🛠️ Scrap Type: ${scrapType}`);
+    document.getElementById("pickupForm").reset();
+  });
+</script>
+
+  <!-- Popup -->
+  <div id="popup" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white p-8 rounded shadow-lg text-center">
+      <h3 class="text-2xl font-bold mb-2">Thank You!</h3>
+      <p class="mb-4">Your pickup has been scheduled. We’ll contact you soon.</p>
+      <button onclick="closePopup()" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Close</button>
+    </div>
+  </div>
+
+  <!-- Scrap Prices -->
+  <section id="prices"class="bg-green-100 py-12">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-extrabold font-serif text-green-900 mb-4">Current Scrap Prices</h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-6 px-4">
+      <!-- Scrap card -->
+      <div class="bg-white text-green-900 font-medium px-8 py-4 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+        Iron: ₹25/kg
+      </div>
+      <div class="bg-white text-green-900 font-medium px-8 py-4 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+        Plastic: ₹10/kg
+      </div>
+      <div class="bg-white text-green-900 font-medium px-8 py-4 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+        Paper: ₹7/kg
+      </div>
+      <div class="bg-white text-green-900 font-medium px-8 py-4 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+        Steel: ₹30/kg
+      </div>
+      <div class="bg-white text-green-900 font-medium px-8 py-4 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+        Aluminum: ₹35/kg
+      </div>
+      <div class="bg-white text-green-900 font-medium px-8 py-4 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+        MIX: ₹20/kg
+      </div>
+    </div>
+  </section>
+  
+
+<!-- About Section -->
+<section id="about" class="bg-gray-50 py-16 px-4">
+    <div class="max-w-5xl mx-auto text-center">
+      <!-- Heading -->
+      <h2 class="text-4xl font-extrabold font-serif text-green-900 mb-4">About MrScrap</h2>
+      <p class="text-lg text-gray-700 mb-12">
+        MrScrap is your reliable partner for safe, convenient, and eco-friendly scrap collection. <br />
+        We aim to promote sustainability by helping individuals and businesses recycle their waste and contribute to a cleaner planet.
+      </p>
+  
+      <!-- Info Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Mission Card -->
+        <div class="bg-white p-6 rounded-2xl shadow-md transition transform hover:scale-105 hover:shadow-green-300 border-l-4 border-green-500">
+          <h3 class="text-2xl font-bold text-green-700 mb-3">Our Mission</h3>
+          <p class="text-gray-700">
+            To revolutionize the scrap industry by providing door-to-door pickup services that empower citizens to dispose of their waste
+            responsibly and contribute toward a sustainable urban environment.
+          </p>
+        </div>
+  
+        <!-- Why Choose Us Card -->
+        <div class="bg-white p-6 rounded-2xl shadow-md transition transform hover:scale-105 hover:shadow-emerald-300 border-l-4 border-emerald-500">
+          <h3 class="text-2xl font-bold text-green-700 mb-3">Why Choose Us?</h3>
+          <p class="text-gray-700">
+            We offer quick service, transparent pricing, and a commitment to a greener future. Urban Scrapster blends technology and
+            community engagement to encourage eco-friendly practices.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-white text-center fade-in">
+    <h2 class="text-4xl font-extrabold font-serif text-green-900 mb-4">Contact Us</h2>
+    <p class="text-lg mb-2">📞 +91-7455913908</p>
+    <p class="text-lg">📧 mrscrapcontact@gmail.com</p>
+  </section>
+  <!-- SOCIALS -->
+  <section class="flex flex-col items-center justify-center py-10 bg-white bg-opacity-70 backdrop-blur-md mt-10 rounded-xl shadow-md">
+    <h2 class="text-2xl font-semibold mb-6 text-green-800">Connect With Us</h2>
+    <div class="flex flex-wrap justify-center gap-6">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/_riten_04/" target="_blank" class="social-icon">
+        <img src="instagram.png" alt="Instagram" class="icon-img" />
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ritender/" target="_blank" class="social-icon">
+        <img src="linkedin.png" alt="LinkedIn" class="icon-img" />
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/Ritender-Singh" target="_blank" class="social-icon">
+        <img src="github.png" alt="GitHub" class="icon-img" />
+      </a>
+    </div>
+  </section>
+  
+  
+
+  
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+    <p>&copy; 2025 MrScrap BY RITENDER and Team. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showPopup(event) {
+      event.preventDefault();
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    function handleScroll() {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+  
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+  
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+  
+</body>
+
+</html>
