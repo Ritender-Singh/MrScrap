@@ -11,7 +11,8 @@ Welcome to **MrScrap**, an eco-friendly and interactive platform built to make s
 ---
 
 ## 🔗 Live Demo
-https://ritender-singh.github.io/MrScrap/
+
+[CLICK] (https://ritender-singh.github.io/MrScrap/)
 
 
 ---
