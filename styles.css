@@ -114,21 +114,45 @@
 /* BUtton for scehdule */
 
 /* SCEDULE */
+<!-- TailwindCSS already included, now we add live effects and custom styles -->
+<style>
+  /* Background animation using gradient */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #d4fcd6, #c9f7e9, #e1fbd8, #c3fcd8);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+  }
 
-@keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
-  
+
+  /* Optional fade-in animation */
   .animate-fade-in {
-    animation: fade-in 0.8s ease-out forwards;
+    animation: fadeIn 1.5s ease-in-out;
   }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Form card shadow glow */
+  .form-card {
+    box-shadow: 0 0 20px rgba(66, 200, 137, 0.3);
+  }
+
+  /* Radio inputs spacing fix */
+  input[type="radio"] {
+    accent-color: #22c55e; /* Tailwind green-500 */
+    transform: scale(1.1);
+  }
+</style>
+
   
 
 /* PRCE SECTION */
@@ -148,16 +172,33 @@
     animation: fade-in 0.6s ease-out both;
   }
   /* SOCIAL MEDIA */
-  .card {
-    width: fit-content;
-    height: fit-content;
-    background-color: rgb(238, 238, 238);
+  .social-icon {
+    background-color: #111;
+    border-radius: 8px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px 25px;
-    gap: 20px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.1);
+    background-color: #16a34a; /* Tailwind's green-600 */
+    box-shadow: 0 0 20px #86efac; /* Tailwind's green-300 glow */
+  }
+  
+  .icon-img {
+    width: 28px;
+    height: 28px;
+    filter: invert(1); /* Optional: Invert for dark bg */
+    transition: transform 0.3s;
+  }
+  
+  .icon-img:hover {
+    transform: rotate(10deg);
   }
   
  
